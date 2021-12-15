@@ -1,36 +1,11 @@
 {
   "name": "ngx-avatar-persona",
-  "description": "Avatar Persona Angular Component",
-  "version": "1.0.0",
-  "license": "MIT",
-  "author": "Paul Greenberg <greenpau@outlook.com>",
-  "keywords": [
-    "avatar-persona",
-    "avatar",
-    "persona",
-    "badge"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/greenpau/ngx-avatar-persona.git"
-  },
-  "bugs": {
-    "url": "https://github.com/greenpau/ngx-avatar-persona/issues",
-    "email": "greenpau@outlook.com"
-  },
+  "version": "0.0.1",
   "peerDependencies": {
-    "@angular/common": "^13.0.0",
-    "@angular/core": "^13.0.0"
+    "@angular/common": "^13.1.0",
+    "@angular/core": "^13.1.0"
   },
   "dependencies": {
-    "tslib": "^2.0.0"
-  },
-  "resolve": {
-    "fallback": {
-      "path": false,
-      "http": false,
-      "stream": false,
-      "util": false
-    }
+    "tslib": "^2.3.0"
   }
 }

@@ -1,8 +1,6 @@
 /*
- * Public API Surface of Auth Portal Service.
+ * Public API Surface of ngx-avatar-persona
  */
 
-export * from './lib/user-data';
-export * from './lib/auth-portal.service';
-export * from './lib/auth-portal.interceptor';
-export * from './lib/auth-portal-config';
+export * from './lib/avatar-persona.component';
+export * from './lib/avatar-persona.module';
