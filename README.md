@@ -15,8 +15,36 @@ yarn add ngx-avatar-persona
 
 ## Usage
 
-Add the auth portal service to your `app.module.ts` as a provider:
+Add the `AvatarPersonaModule` to your `app.module.ts` as a provider:
 
 ```typescript
-// TODO
+import { AvatarPersonaModule } from 'ngx-avatar-persona';
+
+@NgModule({
+  imports: [
+    ...
+    AvatarPersonaModule,
+    ...
+  ],
+  ...
+})
+```
+
+Next, add the `AvatarPersonaComponent` in `app.component.html`
+via `ngx-avatar-persona`.
+
+```html
+    <mat-toolbar class="shadow" color="primary">
+      <mat-toolbar-row>
+
+        <span class="toolbar-avatar">
+          <ngx-avatar-persona
+            [primaryText]="userAvatarPrimaryText"
+            [secondaryText]="userAvatarSecondaryText"
+            [avatarUrl]="userAvatarUrl">
+          </ngx-avatar-persona>
+        </span>
+
+      </mat-toolbar-row>
+    </mat-toolbar>
 ```

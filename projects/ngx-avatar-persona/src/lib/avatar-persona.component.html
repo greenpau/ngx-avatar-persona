@@ -1,0 +1,14 @@
+<div class="avatar-persona-box">
+  <div class="avatar-persona-image" *ngIf="props.avatarUrl !== ''; else avatarWithIntials">
+    PICS
+  </div>
+  <ng-template #avatarWithIntials>
+    <div class="avatar-persona-image">
+      INIT {{ props.avatarInitials }}
+    </div>
+  </ng-template>
+  <div class="avatar-persona-text">
+    <div class="avatar-persona-title">{{ props.primaryText }}</div>
+    <div class="avatar-persona-subtitle">{{ props.secondaryText }}</div>
+  </div>
+</div>

@@ -5,8 +5,9 @@
 Format prior to committing:
 
 ```bash
-ng lint
 npm run format:write
+ng lint
+ng test
 ```
 
 Prior to release, increment version in `projects/ngx-avatar-persona/package.json`.

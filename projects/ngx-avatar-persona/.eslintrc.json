@@ -9,11 +9,13 @@
         "createDefaultProgram": true
       },
       "rules": {
+        "@typescript-eslint/no-non-null-assertion": ["off"],
+        "@typescript-eslint/member-ordering": ["off"],
         "@angular-eslint/component-selector": [
           "error",
           {
             "type": "element",
-            "prefix": "lib",
+            "prefix": "ngx",
             "style": "kebab-case"
           }
         ],
