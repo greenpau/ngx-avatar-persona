@@ -13,6 +13,7 @@ ng test
 Prior to release, increment version in `projects/ngx-avatar-persona/package.json`.
 
 ```bash
+cat README.md > projects/ngx-avatar-persona/README.md
 versioned --source projects/ngx-avatar-persona/package.json --patch
 NPM_PKG_VER=(`cat ./projects/ngx-avatar-persona/package.json | jq -r .version`)
 git add .
