@@ -3,9 +3,6 @@
 <a href="https://github.com/greenpau/ngx-avatar-persona/actions/" target="_blank"><img src="https://github.com/greenpau/ngx-avatar-persona/workflows/build/badge.svg?branch=main"></a>
 <span class="badge-npmversion"><a href="https://npmjs.org/package/ngx-avatar-persona" title="View this project on NPM"><img src="https://img.shields.io/npm/v/ngx-avatar-persona.svg" alt="NPM version" /></a></span>
 
-See also:
-* [github.com/greenpau/ngx-authp-service](https://github.com/greenpau/ngx-authp-service)
-
 ## Overview
 
 This component display an avatar with primary and secondary text. Upon clicking
@@ -16,6 +13,9 @@ navigate to either "Portal" or "Sign Out".
 to its parent component with either `portal` or `logout` string.
 
 ![](https://github.com/authp/authp.github.io/blob/main/docs/authenticate/webapps/images/ngx-avatar-persona-animation.gif?raw=true)
+
+See also:
+* [github.com/greenpau/ngx-authp-service](https://github.com/greenpau/ngx-authp-service)
 
 ## Installation
 
