@@ -4,14 +4,38 @@
 
 .avatar-persona-text {
   padding: 0.5em 1em 0.5em 1em;
+  text-align: left;
 }
 
 .avatar-persona-title {
-  font-size: 0.75em;
+  font-size: 1.2em;
   line-height: 1.5em;
 }
 
 .avatar-persona-subtitle {
-  font-size: 0.5em;
+  font-size: 0.9em;
   line-height: 1em;
+}
+
+.avatar-persona-image > img {
+  object-fit: cover;
+  vertical-align: text-top;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: thin;
+  border-color: #fafafa4f;
+}
+
+.avatar-persona-initals {
+  object-fit: cover;
+  border-radius: 50%;
+  border-style: solid;
+  border-width: thin;
+  border-color: #fafafa4f;
+  background-color: darkorchid;
+  align-self: center;
+}
+
+.mat-menu-panel.avatar-persona-menu {
+  background: red;
 }

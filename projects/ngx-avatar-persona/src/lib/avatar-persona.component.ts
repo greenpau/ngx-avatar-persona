@@ -1,5 +1,7 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
+import { MatMenuTrigger } from '@angular/material/menu';
 import { AvatarPersonaProps } from './avatar-persona-props';
+import { EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ngx-avatar-persona',
@@ -12,6 +14,7 @@ export class AvatarPersonaComponent {
   @Input()
   set primaryText(s: string) {
     this.props.primaryText = (s && s.trim()) || 'Anonymous';
+    this.props.avatarInitials = this.parseInitials(this.props.primaryText);
   }
   get primaryText(): string {
     return this.props.primaryText!;
@@ -37,6 +40,9 @@ export class AvatarPersonaComponent {
 
   @Input()
   set avatarInitials(s: string) {
+    if (!s || s.length === 0) {
+      return;
+    }
     this.props.avatarInitials = (s && s.trim()) || '';
   }
 
@@ -55,12 +61,25 @@ export class AvatarPersonaComponent {
 
   @Input()
   set size(i: number) {
-    this.props.size = i || 0;
+    this.props.size = i || 36;
   }
 
   get size(): number {
     return this.props.size!;
   }
 
-  constructor() {}
+  @Output() redirect: EventEmitter<string> = new EventEmitter<string>();
+
+  constructor() {
+    this.props.size = 36;
+  }
+
+  parseInitials(s: string): string {
+    const p = s.split(' ');
+    let initials = p[0].substring(0, 1).toUpperCase();
+    if (p.length > 1) {
+      initials += p[p.length - 1].substring(0, 1).toUpperCase();
+    }
+    return initials;
+  }
 }

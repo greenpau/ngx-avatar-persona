@@ -1,14 +1,30 @@
-<div class="avatar-persona-box">
-  <div class="avatar-persona-image" *ngIf="props.avatarUrl !== ''; else avatarWithIntials">
-    PICS
-  </div>
-  <ng-template #avatarWithIntials>
-    <div class="avatar-persona-image">
-      INIT {{ props.avatarInitials }}
+<button mat-button [matMenuTriggerFor]="profileMenu">
+  <div class="avatar-persona-box">
+    <div class="avatar-persona-image" *ngIf="props.avatarUrl && props.avatarUrl !== ''; else avatarWithInitials">
+      <img
+        [src]="props.avatarUrl"
+        [width]="size"
+        [height]="size"
+        loading="lazy" />
     </div>
-  </ng-template>
-  <div class="avatar-persona-text">
-    <div class="avatar-persona-title">{{ props.primaryText }}</div>
-    <div class="avatar-persona-subtitle">{{ props.secondaryText }}</div>
+    <ng-template #avatarWithInitials>
+      <div style="width: {{ props.size }}px; height: {{ props.size }}px;" class="avatar-persona-initals">
+      {{ props.avatarInitials }}
+      </div>
+    </ng-template>
+    <div class="avatar-persona-text">
+      <div class="avatar-persona-title">{{ props.primaryText }}</div>
+      <div class="avatar-persona-subtitle">{{ props.secondaryText }}</div>
+    </div>
   </div>
-</div>
+</button>
+<mat-menu #profileMenu="matMenu" class="avatar-persona-menu">
+  <button mat-menu-item (click)="redirect.emit('portal')">
+    <mat-icon>apps</mat-icon>
+    <span>Portal</span>
+  </button>
+  <button mat-menu-item (click)="redirect.emit('logout')">
+    <mat-icon>logout</mat-icon>
+    <span>Sign Out</span>
+  </button>
+</mat-menu>

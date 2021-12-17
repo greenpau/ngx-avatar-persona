@@ -1,5 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 import { AvatarPersonaComponent } from './avatar-persona.component';
 
 describe('AvatarPersonaComponent', () => {
@@ -8,6 +10,7 @@ describe('AvatarPersonaComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [MatMenuModule, MatButtonModule, MatIconModule],
       declarations: [AvatarPersonaComponent],
     }).compileComponents();
   });
